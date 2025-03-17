@@ -25,7 +25,6 @@
 
 
   <title>Hybrid Reciprocal Transformer with Triplet Feature Alignment for Scene Graph Generation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -68,7 +67,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">The Chinese University of Hong Kong <br>CVPR 2025</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -125,22 +124,18 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/teaser.jpg" alt="Project Teaser" width="100%">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Complex scenarios often involve overlapping visual relationships, where a single object can assume multiple roles across different triplets. Identifying these multi-role objects is challenging without knowing their aligned triplet features. Moreover, aligned triplets (top) and component (bottom) representations correspond to the same visual relation tuple, offering an opportunity to leverage their inherent relevance for reciprocal refinement.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser image -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -150,7 +145,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Scene graph generation is a pivotal task in computer vision, aiming to identify all visual relation tuples within an image. 
+            The advancement of methods involving triplets has sought to enhance task performance by integrating triplets as contextual features for more precise predicate identification from component level. 
+            However, challenges remain due to interference from multi-role objects in overlapping tuples within complex environments, which impairs the model's ability to distinguish and align specific triplet features for reasoning diverse semantics of multi-role objects.
+            To address these issues, we introduce a novel framework that incorporates a triplet alignment model into a hybrid reciprocal transformer architecture, starting from using triplet mask features to guide the learning of component-level relation graphs. 
+            To effectively distinguish multi-role objects characterized by overlapping visual relation tuples, we introduce a triplet alignment loss, which provides multi-role objects with aligned features from triplet and helps customize them.
+            Additionally, we explore the inherent connectivity between hybrid aligned triplet and component features through a bidirectional refinement module, which enhances feature interaction and reciprocal reinforcement. 
+            Experimental results demonstrate that our model achieves state-of-the-art performance on the Visual Genome and Action Genome datasets, underscoring its effectiveness and adaptability.
           </p>
         </div>
       </div>
@@ -167,94 +168,80 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <div style="text-align: center;">
+        <img src="static/images/main_figure_new.jpg" alt="MY ALT TEXT" width="80%"/>
+        </div>
+
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Model overview of our method. Hybrid reciprocal transformer deploys four multi-layer decoder structures to embed triplet mask and visual relation tuple components learning using hybrid representations. We illustrate the detailed feature flow of each decoder to visualize two interaction paradigms within this transformer. The first paradigm facilitates triplet iterative guidance and enhances contextual feature integration for predicate recognition at the component level. The second paradigm employs aligned triplet and component features to enable bidirectional refinement of the hybrid triplet-level and component-level representations.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <div style="text-align: center;">
+          <img src="static/images/alignment_loss_fig.jpg" alt="MY ALT TEXT" width="60%"/>
+        </div>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Triplet feature alignment loss measures consistency between triplet feature with tripled component-level feature. It encourages similarity between triplet and component feature from identical visual relation tuples to distinguish multi-role object by aligning different triplet feature into component level.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
+      
+
+
+      </div>
     </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center;">
+        <img src="static/images/experiment_1.jpg" alt="MY ALT TEXT" width="80%"/>
+        </div>
+
+        <h2 class="subtitle has-text-centered">
+          Scene graph generation performance on Visual Genome. 
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center;">
+          <img src="static/images/qualitative_res.jpg" alt="MY ALT TEXT" width="80%"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          Qualitative analysis of our method compared with the baseline models, SpeaQ with ISG, indicates that our method yields significantly enhanced accuracy in the prediction of predicates and object detection.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center;">
+          <img src="static/images/appendix_triplet_mask_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          Visualization results of the triplet mask from our method, and its corresponding visual relation in VG datasets.
+        </h2>
+      </div>
+
+      <div class="item">
+        <!-- Your image here -->
+        <div style="text-align: center;">
+          <img src="static/images/appendix_scene_graph_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
+        </div>
+        <h2 class="subtitle has-text-centered">
+          Qualitative results of our methods on VG datasets. Left part is the original image, right part is the constructed scene graph by our method. \textcolor{red}{Dashed rectangle} marks our correct detected visual relation that is not annotated in ground truth.        </h2>
+      </div>
   </div>
 </div>
 </div>
 </section>
 <!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
 
 
@@ -266,13 +253,12 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div class="content has-text-centered">
+        <p class="is-size-4">Coming Soon!</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 <!--End paper poster -->
 
 
@@ -280,7 +266,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{fu2025hybrid,
+    title={Hybrid Reciprocal Transformer with Triplet Feature Alignment for Scene Graph Generation},
+    author={Fu, Jiawei and Zhang, Tiantian and Chen, Kai and Dou, Qi},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2025}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
