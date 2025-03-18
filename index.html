@@ -55,14 +55,14 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Jiawei Fu</a>,</span>
+                Jiawei Fu,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Tiantian Zhang</a>,</span>
+                  Tiantian Zhang,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Kai Chen</a>,
+                    Kai Chen,
                   </span>
                   <span class="author-block">
-                    <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Qi Dou</a>
+                    Qi Dou
                   </span>
                   </div>
 
@@ -106,13 +106,13 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv</span> -->
                 </a>
               </span>
             </div>
@@ -161,87 +161,84 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Remove carousel sections and replace with individual image sections -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
+      <div style="text-align: center;">
         <img src="static/images/main_figure_new.jpg" alt="MY ALT TEXT" width="80%"/>
-        </div>
-
-        <h2 class="subtitle has-text-centered">
-          Model overview of our method. Hybrid reciprocal transformer deploys four multi-layer decoder structures to embed triplet mask and visual relation tuple components learning using hybrid representations. We illustrate the detailed feature flow of each decoder to visualize two interaction paradigms within this transformer. The first paradigm facilitates triplet iterative guidance and enhances contextual feature integration for predicate recognition at the component level. The second paradigm employs aligned triplet and component features to enable bidirectional refinement of the hybrid triplet-level and component-level representations.
-        </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
-          <img src="static/images/alignment_loss_fig.jpg" alt="MY ALT TEXT" width="60%"/>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Triplet feature alignment loss measures consistency between triplet feature with tripled component-level feature. It encourages similarity between triplet and component feature from identical visual relation tuples to distinguish multi-role object by aligning different triplet feature into component level.
-        </h2>
-      </div>
-      
-
-
-      </div>
+      <h2 class="subtitle has-text-centered">
+        Model overview of our method. Hybrid reciprocal transformer deploys four multi-layer decoder structures to embed triplet mask and visual relation tuple components learning using hybrid representations. We illustrate the detailed feature flow of each decoder to visualize two interaction paradigms within this transformer. The first paradigm facilitates triplet iterative guidance and enhances contextual feature integration for predicate recognition at the component level. The second paradigm employs aligned triplet and component features to enable bidirectional refinement of the hybrid triplet-level and component-level representations.
+      </h2>
     </div>
   </div>
 </section>
-<!-- End image carousel -->
 
-
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
-        <img src="static/images/experiment_1.jpg" alt="MY ALT TEXT" width="80%"/>
-        </div>
-
-        <h2 class="subtitle has-text-centered">
-          Scene graph generation performance on Visual Genome. 
-        </h2>
+      <div style="text-align: center;">
+        <img src="static/images/alignment_loss_fig.jpg" alt="MY ALT TEXT" width="60%"/>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
-          <img src="static/images/qualitative_res.jpg" alt="MY ALT TEXT" width="80%"/>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Qualitative analysis of our method compared with the baseline models, SpeaQ with ISG, indicates that our method yields significantly enhanced accuracy in the prediction of predicates and object detection.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
-          <img src="static/images/appendix_triplet_mask_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Visualization results of the triplet mask from our method, and its corresponding visual relation in VG datasets.
-        </h2>
-      </div>
-
-      <div class="item">
-        <!-- Your image here -->
-        <div style="text-align: center;">
-          <img src="static/images/appendix_scene_graph_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
-        </div>
-        <h2 class="subtitle has-text-centered">
-          Qualitative results of our methods on VG datasets. Left part is the original image, right part is the constructed scene graph by our method. \textcolor{red}{Dashed rectangle} marks our correct detected visual relation that is not annotated in ground truth.        </h2>
-      </div>
+      <h2 class="subtitle has-text-centered">
+        Triplet feature alignment loss measures consistency between triplet feature with tripled component-level feature. It encourages similarity between triplet and component feature from identical visual relation tuples to distinguish multi-role object by aligning different triplet feature into component level.
+      </h2>
+    </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="text-align: center;">
+        <img src="static/images/experiment_1.jpg" alt="MY ALT TEXT" width="80%"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Scene graph generation performance on Visual Genome. 
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="text-align: center;">
+        <img src="static/images/qualitative_res.jpg" alt="MY ALT TEXT" width="80%"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Qualitative analysis of our method compared with the baseline models, SpeaQ with ISG, indicates that our method yields significantly enhanced accuracy in the prediction of predicates and object detection.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="text-align: center;">
+        <img src="static/images/appendix_triplet_mask_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Visualization results of the triplet mask from our method, and its corresponding visual relation in VG datasets.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div style="text-align: center;">
+        <img src="static/images/appendix_scene_graph_visualization.jpg" alt="MY ALT TEXT" width="80%"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Qualitative results of our methods on VG datasets. Left part is the original image, right part is the constructed scene graph by our method. \textcolor{red}{Dashed rectangle} marks our correct detected visual relation that is not annotated in ground truth.
+      </h2>
+    </div>
+  </div>
+</section>
 
 
 
